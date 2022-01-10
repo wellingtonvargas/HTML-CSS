@@ -1,0 +1,84 @@
+body {
+    background-color: rgb(146, 209, 209);
+}
+
+.wrapper {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1, .5em;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+}
+
+
+
+
+.lista-item {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: justify;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.408);
+}
+
+
+.titulo {
+    cursor: pointer;
+    padding: 10px;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgba(38, 38, 197, 0.7);
+}
+
+.conteudo {
+    font-family: Arial, sans-serif;
+    font-size: 0.8em;
+}
+
+.titulo::before {
+    content: '';
+    display: inline-block;
+    height: 15px;
+    width: 25px;
+    background-color: rgba(38, 38, 197, 0.7);
+}
+
+
+.titulo::after {
+    content: '+';
+    float: right;
+    transition: .4s ease;
+}
+
+.conteudo {
+    padding: 10px;
+    line-height: 1.4em;
+    display: none;
+}
+
+
+.mostrar {
+    display: none;
+}
+
+.mostrar:checked+.mostrar-cont .conteudo {
+    display: block;
+}
+
+
+.mostrar:checked+.mostrar-cont .titulo::after {
+    transform: rotate(45deg) scale(1.1);
+}
+
+label img {
+    max-width: 100%;
+    display: none;
+}
+
+.mostrar:checked+ .mostrar-cont .img {
+    display: block;
+}

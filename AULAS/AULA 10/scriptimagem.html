@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste imagem javascript</title>
+</head>
+<body>
+    <h1>Teste de imagem JavaScript</h1>
+    <div id="res">
+        Aqui ira aparecer a imagem...
+    </div>
+    <script>
+        var img = window.document.createElement('img')
+        img.setAttribute('src', 'foto-2.jpg')
+        var res = window.document.getElementById('res')
+        res.appendChild(img)
+        
+    </script>
+    
+</body>
+</html>

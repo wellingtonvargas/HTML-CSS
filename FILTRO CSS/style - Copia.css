@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    width: 780px;
+    height: auto;
+    margin: 100px auto;
+}
+
+#galeria img {
+    float: left;
+    width: 250px;
+    padding: 5px;
+    transition: all .4s;
+}
+
+
+section label {
+    width: 175px;
+    padding: 20px 10px;
+    display: block;
+    float: left;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial';
+    text-align: center;
+    cursor: pointer;
+}
+
+/* SELETOR IRMÃO É UTILIZADO O SINAL DE MAIS*/
+input:checked+label {
+    background-color: #586f7c;
+}
+
+
+input {
+    display: none;
+}
+
+
+#bt_tecnologia:checked~#galeria .animais,
+#bt_tecnologia:checked~#galeria .musica {
+    opacity: .4;
+    transform: scale(0.5);
+}
+
+#bt_animais:checked~#galeria .tecnologia,
+#bt_animais:checked~#galeria .musica {
+    opacity: .4;
+    transform: scale(0.5);
+}
+
+#bt_musica:checked~#galeria .tecnologia,
+#bt_musica:checked~#galeria .animais {
+    opacity: .4;
+    transform: scale(0.5);
+}
+
+
